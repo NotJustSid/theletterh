@@ -1,2 +1,10 @@
 .vscode/
 draft.md
+node_modules/
+_letters_source/
+npm-debug.log
+.env
+scripts/
+favicon.png
+package-lock.json
+package.json

@@ -7,20 +7,29 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Style+Script&display=swap" rel="stylesheet">
       <style>
-  :root { --bg-color: #1a1a1a; --text-color: #e0e0e0; --accent-color: #007acc; --border-color: #333; }
+  :root { --bg-color: #1a1a1a; --text-color: #e0e0e0; --accent-color: #007acc; --border-color: #333; --h1-border-color: #4e4e4e;}
   body {
     font-family: 'Archivo', sans-serif;
-    background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
     padding: 1rem;
     line-height: 1.7;
   }
-  .container { max-width: 800px; margin: 2rem auto; padding: 1rem 2rem; }
-  h1 { color: white; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
+
+  body {
+        background: linear-gradient(#20201d, #302734);
+        background-attachment: fixed;
+        background-size: 100% 100vh;
+        background-repeat: no-repeat;   
+  }
+
+  .container { max-width: 1200px; margin: 2rem auto; padding: 1rem 2rem; }
+  h1 { color: white; border-bottom: 1px solid var(--h1-border-color); padding-bottom: 0.5rem; }
   ul { list-style: none; padding: 0; }
-  li { margin: 1.5rem 0; }
+  li { margin: 1.5rem 0; border-bottom: solid 1px var(--border-color); padding-bottom: 16px}
+  li:first-of-type { border-top: solid 1px var(--border-color); padding-top: 16px; }
   a { font-size: 1.2rem; color: var(--accent-color); text-decoration: none; transition: color 0.2s; }
   a:hover { color: white; }
   p > small { color: #888; }
@@ -33,17 +42,17 @@
 </style>
     </head>
     <body>
-      <center>
-        <!-- MODIFIED: Using the pre-made Data URI -->
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjI1MCIgdmlld0JveD0iMCAwIDIwMCAyNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPCEtLSBUcnVuayBhbmQgQnJhbmNoZXMgLS0+CiAgPHBhdGggZD0iTSAxMDAgMjQwIFEgOTUgMTUwIDcwIDEwMCIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjEwIiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTSAxMDAgMjQwIFEgMTA1IDE1MCAxMzAgMTAwIiBzdHJva2U9IiM4QjQ1MTMiIHN0cm9rZS13aWR0aD0iMTAiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNIDgwIDE1MCBRIDYwIDEyMCA0MCA4MCIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNIDEyMCAxNTAgUSAxNDAgMTIwIDE2MCA4MCIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjYiIGZpbGw9Im5vbmUiLz4KICA8cGF0aCBkPSJNIDEwMCAxODAgUSAxMTAgMTQwIDEyMCAxMTAiIHN0cm9rZT0iIzhCNDUxMyIgc3Ryb2tlLXdpZHRoPSI3IiBmaWxsPSJub25lIi8+CiAgPHBhdGggZD0iTSAxMDAgMTgwIFEgOTAgMTQwIDgwIDExMCIgc3Ryb2tlPSIjOEI0NTEzIiBzdHJva2Utd2lkdGg9IjciIGZpbGw9Im5vbmUiLz4KCiAgPCEtLSBGb2xpYWdlIC0tPgogIDxjaXJjbGUgY3g9IjEwMCIgY3k9IjgwIiByPSI2MCIgZmlsbD0iIzIyOEIyMiIgLz4KICA8Y2lyY2xlIGN4PSI2MCIgY3k9IjEwMCIgcj0iNDAiIGZpbGw9IiMyRThCNTciIC8+CiAgPGNpcmNsZSBjeD0iMTQwIiBjeT0iMTAwIiByPSI0MCIgZmlsbD0iIzJFOEI1NyIgLz4KICA8Y2lyY2xlIGN4PSI4MCIgY3k9IjUwIiByPSIzMCIgZmlsbD0iIzNDQjM3MSIgLz4KICA8Y2lyY2xlIGN4PSIxMjAiIGN5PSI1MCIgcj0iMzAiIGZpbGw9IiMzQ0IzNzEiIC8+CiAgPGNpcmNsZSBjeD0iMTAwIiBjeT0iMzAiIHI9IjI1IiBmaWxsPSIjMkU4QjU3IiAvPgoKICA8IS0tIEZsb3dlcnMgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODAgNzApIj4KICAgIDxwYXRoIGQ9Ik0gMCAtMTAgTCAyIC0yIEwgMTAgMCBMIDIgMiBMIDAgMTAgTCAtMiAyIEwgLTEwIDAgTCAtMiAtMiBaIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJnb2xkIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTIwIDcwKSI+CiAgICA8cGF0aCBkPSJNIDAgLTEwIEwgMiAtMiBMIDEwIDAgTCAyIDIgTCAwIDEwIEwgLTIgMiBMIC0xMCAwIEwgLTIgLTIgWiIgZmlsbD0id2hpdGUiIHN0cm9rZT0iZ29sZCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPC9nPgogIDxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEwMCA0MCkiPgogICAgPHBhdGggZD0iTSAwIC0xMCBMIDIgLTIgTCAxMCAwIEwgMiAyIEwgMCAxMCBMIC0yIDIgTCAtMTAgMCBMIC0yIC0yIFoiIGZpbGw9IndoaXRlIiBzdHJva2U9ImdvbGQiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwvZz4KICA8ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MCAxMTApIj4KICAgIDxwYXRoIGQ9Ik0gMCAtOCBMIDEuNSAtMS41IEwgOCAwIEwgMS41IDEuNSBMIDAgOCBMIC0xLjUgMS41IEwgLTggMCBMIC0xLjUgLTEuNSBaIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJnb2xkIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8L2c+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQwIDExMCkiPgogICAgPHBhdGggZD0iTSAwIC04IEwgMS41IC0xLjUgTCA4IDAgTCAxLjUgMS41IEwgMCA4IEwgLTEuNSAxLjUgTCAtOCAwIEwgLTEuNSAtMS41IFoiIGZpbGw9IndoaXRlIiBzdHJva2U9ImdvbGQiIHN0cm9rZS13aWR0aD0iMSIvPgogIDwvZz4KPC9zdmc+" alt="Myrtle Tree" width="200" height="250">
-      </center>
+    <div style="text-align: center;">
+        <img src="./tree.png" style="width: 250px">
+    </div>
       <div class="container">
-        <h1>The Letter H Project</h1>
+        <h1 style="display: flex; justify-content: center; font-family: 'Style Script'; font-size: 3rem; margin-top: 0px">The Letter H Project</h1>
         <p>
         "People will forget what you said, people will forget what you did, but people will never forget how you made them feel." - Maya Angelou
         </p>
         <p><small>Probabilistic letters through the void to someone. All dates are in Pacific Time (PT) because reasons</small></p>
-        <ul><li><a href="./letters/2025-08-02_03-22-51.html">Letter from 2025-08-02 at 3:22 AM titled "<strong>The Sun Is Also a Star</strong>"</a></li>
+        <ul><li><a href="./letters/2025-08-02_15-30-22.html">Letter from 2025-08-02 at 3:30 PM titled "<strong>And Still, I Show Up</strong>"</a></li>
+<li><a href="./letters/2025-08-02_03-22-51.html">Letter from 2025-08-02 at 3:22 AM titled "<strong>The Sun Is Also a Star</strong>"</a></li>
 <li><a href="./letters/2025-08-01_11-45-12.html">Letter from 2025-08-01 at 11:45 AM titled "<strong>Possibilities</strong>"</a></li>
 <li><a href="./letters/2025-07-31_18-16-12.html">Letter from 2025-07-31 at 6:16 PM titled "<strong>A casual log for the ritual</strong>"</a></li>
 <li><a href="./letters/2025-07-31_11-34-51.html">Letter from 2025-07-31 at 11:34 AM titled "<strong>Discovery</strong>"</a></li>
